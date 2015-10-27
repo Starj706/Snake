@@ -5,12 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Snake
-{
-    class VertikalLine
+{ 
+    class VertikalLine : Figure
     {
-        List<Point> pList;
-
-        public VertikalLine(int x, int yTop, int yDown, char sym)
+     public VertikalLine(int x, int yTop, int yDown, char sym)
         {
             pList = new List<Point>();
             for (int y = yTop; y <= yDown; y++)
@@ -20,13 +18,6 @@ namespace Snake
             }
 
         }
-
-        public void DrowV()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-            }
-        }
+        
     }
 }
